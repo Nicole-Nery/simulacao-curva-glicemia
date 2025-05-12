@@ -44,6 +44,7 @@ def efeito_insulina(t, unidades, hora_insulina):
     t0 = (hora_insulina*60)
     pico_efeito = unidades*30 # Considerando que cada unidade de insulina reduz 30mg/dL
     gaussiana = -pico_efeito * np.exp(-((t - t0)/60)**2)
+    return gaussiana
 
 
 # aplicar efeitos
